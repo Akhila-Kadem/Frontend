@@ -6,7 +6,17 @@ env:
   - CI=true
 
 before_install:
-  - docker build -t Akhila-Kadem/Frontend -f Dockerfile.dev .
+  - docker build -t akhilakademfrontend -f Dockerfile.dev .
 
 script:
-  - docker run Akhila-Kadem/Frontend npm run test -- -- coverage
+  - docker run akhilakademfrontend npm run test -- -- coverage
+
+#deploy:
+ # provider: elasticbeanstalk
+#  region: "us-east-1"
+ # app: "frontend"
+ # env: "Frontend-env"
+ # bucket_name: "elasticbeanstalk-us-east-1-103572352910"
+ # bucket_path: "frontend"
+  #on:
+  #  branch: main
