@@ -8,10 +8,10 @@ env:
   - CI=true
 
 before_install:
-  - docker build -t akhilakademfrontend -f Dockerfile.dev .
+  - docker build -t akhilakadem/frontend -f Dockerfile.dev .
 
 script:
-  - docker run  akhilakademfrontend npm run test -- --coverage
+  - docker run  akhilakadem/frontend npm run test -- --coverage
 
 #deploy:
  # provider: elasticbeanstalk
