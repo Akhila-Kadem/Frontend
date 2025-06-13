@@ -1,6 +1,8 @@
 language: generic  # use "generic" since you're using Docker, not Ruby
 dist: focal
 os: linux
+rvm:
+  - 3.3.5
 services: 
   - docker
 
