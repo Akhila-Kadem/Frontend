@@ -1,4 +1,5 @@
 language: generic  # use "generic" since you're using Docker, not Ruby
+dist: focal
 os: linux
 dist: xenial
 services: 
